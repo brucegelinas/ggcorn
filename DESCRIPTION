@@ -1,0 +1,32 @@
+Package: ggcorn
+Title: Corn Cobs as Bars in 'ggplot2'
+Version: 0.13.1
+Authors@R:
+    person("Bruce", "Gélinas", , "bruce.gelinas@gmail.com", role = c("aut", "cre"))
+Description: Adds a geom_cob() layer to 'ggplot2' that draws each corn yield value
+    as a cob with kernels, a tapered tip and husks, in the manner of geom_col().
+    Kernel size can show thousand-kernel weight, the tip can show unpollinated
+    kernels, and the cob can carry common smut galls or western bean cutworm
+    damage. Includes palettes to color kernels by yield, disease severity or
+    type of ear rot.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Language: en-US
+Depends:
+    R (>= 4.1.0)
+Imports:
+    dplyr (>= 1.1.0),
+    ggplot2 (>= 3.5.0),
+    grDevices,
+    grid,
+    rlang,
+    scales,
+    stats,
+    tibble,
+    tidyr,
+    utils
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1

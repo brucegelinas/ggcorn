@@ -22,8 +22,19 @@ later and `dplyr` 1.1 or later.
 library(ggplot2)
 library(ggcorn)
 
-ggplot(yields, aes(x = grain_yield, y = rotation)) +
-  geom_cob()
+yields <- data.frame(
+  rotation = factor(
+    c("Monoculture", "Corn / soy", "Corn / soy / cereal", "+ clover"),
+    levels = c("Monoculture", "Corn / soy", "Corn / soy / cereal", "+ clover")
+  ),
+  grain_yield = c(9.1, 10.2, 10.9, 11.6)
+)
+
+ggplot(yields, aes(x = grain_yield, y = rotation, fill = grain_yield)) +
+  geom_cob() +
+  scale_fill_cob_c() +
+  labs(x = "Yield (t/ha)", y = NULL) +
+  theme_corn()
 ```
 
 Yield goes on `x` and the category on `y`. Any unit works: index, t/ha or bu/ac. Add

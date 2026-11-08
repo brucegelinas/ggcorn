@@ -34,13 +34,13 @@ fictional_components <- data.frame(
 
 components_figure <- ggplot(fictional_components, aes(potential_yield, trial)) +
   geom_cob(aes(thousand_kernel_weight = tkw, unpollinated = unpollinated_kernels), show.legend = F, weight_label = T, weight_unit = "g / 1000 seeds") +
-  scale_x_continuous(expand = expansion(mult = c(0.02, 0.32))) +
+   scale_x_continuous(expand = expansion(mult = c(0.02, 0.3))) +
   labs(title = "Thousand-kernel weight and unpollinated kernels (fictional data)", x = NULL, y = NULL) +
-theme_corn()
+theme_corn(x_values = F) 
 
 ggsave(
   "man/figures/README-components.png", components_figure,
-  width = 10, height = 4, dpi = 150, device = ragg::agg_png
+  width = 12, height = 6, dpi = 150, device = ragg::agg_png
 )
 
 smut_levels <- c(0, 5, 15, 30, 60, 100)

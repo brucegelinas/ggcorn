@@ -30,9 +30,8 @@ yields <- data.frame(
   grain_yield = c(9.1, 10.2, 10.9, 11.6)
 )
 
-ggplot(yields, aes(x = grain_yield, y = rotation, fill = grain_yield)) +
+ggplot(yields, aes(x = grain_yield, y = rotation)) +
   geom_cob() +
-  scale_fill_cob_c() +
   labs(x = "Yield (t/ha)", y = NULL) +
   theme_corn()
 ```

@@ -32,7 +32,7 @@ yields <- data.frame(
 
 ggplot(yields, aes(x = grain_yield, y = rotation)) +
   geom_cob() +
-  labs(x = "Yield (t/ha)", y = NULL) +
+  labs(x = "Yield (t/ha)") +
   theme_corn()
 ```
 
